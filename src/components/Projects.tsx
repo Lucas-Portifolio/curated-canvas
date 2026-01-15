@@ -1,4 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
+import StaggerReveal, { StaggerItem } from "./StaggerReveal";
 
 interface Project {
   id: number;
@@ -71,74 +73,72 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <ScrollReveal className="text-center mb-16">
           <p className="text-accent font-medium mb-2">Meu Trabalho</p>
           <h2 className="section-title">Projetos em Destaque</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Uma seleção dos meus projetos mais recentes e impactantes
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <article
-              key={project.id}
-              className="project-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              
-              <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end">
-                <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-sm text-muted-foreground mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-3">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="skill-tag text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-accent hover:text-accent-foreground transition-colors"
-                      >
-                        <ExternalLink size={16} />
-                        <span>Ver Projeto</span>
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <Github size={16} />
-                        <span>Código</span>
-                      </a>
-                    )}
+        <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.1}>
+          {projects.map((project) => (
+            <StaggerItem key={project.id}>
+              <article className="project-card group">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
+                <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                      {project.title}
+                    </h3>
+                    
+                    <p className="text-sm text-muted-foreground mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-3">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {project.tags.slice(0, 3).map((tag) => (
+                        <span key={tag} className="skill-tag text-xs">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm text-accent hover:text-accent-foreground transition-colors"
+                        >
+                          <ExternalLink size={16} />
+                          <span>Ver Projeto</span>
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          <Github size={16} />
+                          <span>Código</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerReveal>
       </div>
     </section>
   );

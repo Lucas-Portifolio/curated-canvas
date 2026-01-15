@@ -1,4 +1,5 @@
 import { Briefcase } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 interface ExperienceItem {
   id: number;
@@ -50,23 +51,24 @@ const Experience = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <ScrollReveal className="text-center mb-16">
           <p className="text-accent font-medium mb-2">Minha Jornada</p>
           <h2 className="section-title">Experiência Profissional</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Trajetória de crescimento e aprendizado contínuo
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="max-w-3xl mx-auto">
           <div className="relative pl-12">
             <div className="timeline-line" />
             
             {experiences.map((exp, index) => (
-              <div
+              <ScrollReveal
                 key={exp.id}
+                delay={index * 0.15}
+                direction="left"
                 className="relative mb-12 last:mb-0"
-                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="timeline-dot top-1" />
                 
@@ -96,7 +98,7 @@ const Experience = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
