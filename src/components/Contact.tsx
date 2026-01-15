@@ -29,10 +29,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-display font-bold text-foreground">Email</h3>
                       <a 
-                        href="mailto:seuemail@email.com" 
+                        href="mailto:lucas_chaves14@outlook.com" 
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        seuemail@email.com
+                        lucas_chaves14@outlook.com
                       </a>
                     </div>
                   </div>
@@ -48,12 +48,12 @@ const Contact = () => {
                     <div>
                       <h3 className="font-display font-bold text-foreground">LinkedIn</h3>
                       <a 
-                        href="https://linkedin.com/in/seu-perfil" 
+                        href="https://linkedin.com/in/lucas-xae" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        /in/seu-perfil
+                        /in/lucas-xae
                       </a>
                     </div>
                   </div>
@@ -69,12 +69,12 @@ const Contact = () => {
                     <div>
                       <h3 className="font-display font-bold text-foreground">GitHub</h3>
                       <a 
-                        href="https://github.com/seu-usuario" 
+                        href="https://github.com/lucasxae" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        @seu-usuario
+                        @lucasxae
                       </a>
                     </div>
                   </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-display font-bold text-foreground">Localização</h3>
-                      <p className="text-muted-foreground">São Paulo, Brasil</p>
+                      <p className="text-muted-foreground">Belo Horizonte, MG</p>
                     </div>
                   </div>
                 </div>

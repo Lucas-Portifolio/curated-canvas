@@ -111,11 +111,22 @@
 
   .project-card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 z-10;
+    @apply absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/70 to-gray-900/30 opacity-85 transition-opacity duration-300 z-10;
   }
 
   .project-card:hover::before {
-    @apply opacity-90;
+    @apply opacity-95;
+  }
+
+  .project-card h3,
+  .project-card p,
+  .project-card a,
+  .project-card span {
+    @apply text-white;
+  }
+
+  .project-card .skill-tag {
+    @apply bg-white/10 text-white border-white/20;
   }
 
   .project-card:hover {

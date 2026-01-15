@@ -29,43 +29,43 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend",
-    icon: Layout,
-    skills: [
-      { name: "React / Next.js", level: 95, icon: Code2 },
-      { name: "TypeScript", level: 90, icon: Code2 },
-      { name: "Tailwind CSS", level: 92, icon: Palette },
-      { name: "Vue.js", level: 75, icon: Code2 },
-    ],
-  },
-  {
     title: "Backend",
     icon: Server,
     skills: [
-      { name: "Node.js", level: 88, icon: Terminal },
-      { name: "Python", level: 80, icon: Terminal },
-      { name: "PostgreSQL", level: 85, icon: Database },
-      { name: "MongoDB", level: 78, icon: Database },
+      { name: "Java / Kotlin", level: 90, icon: Terminal },
+      { name: "C# / .NET", level: 85, icon: Terminal },
+      { name: "Spring Boot", level: 88, icon: Server },
+      { name: "Arquitetura de Eventos", level: 85, icon: GitBranch },
     ],
   },
   {
-    title: "DevOps & Cloud",
+    title: "Frontend",
+    icon: Layout,
+    skills: [
+      { name: "React", level: 80, icon: Code2 },
+      { name: "Angular", level: 75, icon: Code2 },
+      { name: "TypeScript", level: 82, icon: Code2 },
+      { name: "JavaScript", level: 85, icon: Code2 },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
     icon: Cloud,
     skills: [
-      { name: "Docker", level: 85, icon: Server },
-      { name: "AWS", level: 80, icon: Cloud },
-      { name: "CI/CD", level: 82, icon: GitBranch },
-      { name: "Kubernetes", level: 70, icon: Cloud },
+      { name: "AWS", level: 85, icon: Cloud },
+      { name: "GCP", level: 80, icon: Cloud },
+      { name: "Docker", level: 82, icon: Server },
+      { name: "Kubernetes", level: 78, icon: Cloud },
     ],
   },
   {
-    title: "Mobile & Outros",
-    icon: Smartphone,
+    title: "Banco de Dados & Mensageria",
+    icon: Database,
     skills: [
-      { name: "React Native", level: 75, icon: Smartphone },
-      { name: "Git", level: 92, icon: GitBranch },
-      { name: "REST APIs", level: 90, icon: Globe },
-      { name: "GraphQL", level: 72, icon: Globe },
+      { name: "MySQL", level: 85, icon: Database },
+      { name: "BigQuery", level: 75, icon: Database },
+      { name: "Firestore (NoSQL)", level: 80, icon: Database },
+      { name: "Event-Driven (Pub/Sub)", level: 82, icon: Globe },
     ],
   },
 ];
@@ -110,18 +110,18 @@ const SkillBar = ({ skill, delay }: { skill: Skill; delay: number }) => {
 };
 
 const techLogos = [
+  { name: "Java", color: "#007396" },
+  { name: "Kotlin", color: "#7F52FF" },
+  { name: "C#", color: "#239120" },
+  { name: ".NET", color: "#512BD4" },
   { name: "React", color: "#61DAFB" },
-  { name: "TypeScript", color: "#3178C6" },
-  { name: "Node.js", color: "#339933" },
-  { name: "Python", color: "#3776AB" },
-  { name: "Docker", color: "#2496ED" },
+  { name: "Angular", color: "#DD0031" },
+  { name: "Spring Boot", color: "#6DB33F" },
   { name: "AWS", color: "#FF9900" },
-  { name: "PostgreSQL", color: "#4169E1" },
-  { name: "MongoDB", color: "#47A248" },
-  { name: "Git", color: "#F05032" },
-  { name: "Tailwind", color: "#06B6D4" },
-  { name: "Next.js", color: "#ffffff" },
-  { name: "GraphQL", color: "#E10098" },
+  { name: "GCP", color: "#4285F4" },
+  { name: "Docker", color: "#2496ED" },
+  { name: "Kubernetes", color: "#326CE5" },
+  { name: "MySQL", color: "#4479A1" },
 ];
 
 const Skills = () => {
@@ -228,10 +228,10 @@ const Skills = () => {
         <ScrollReveal className="mt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { value: "8+", label: "Anos de Experiência" },
-              { value: "50+", label: "Projetos Concluídos" },
-              { value: "30+", label: "Clientes Satisfeitos" },
-              { value: "15+", label: "Tecnologias" },
+              { value: "3+", label: "Anos de Experiência" },
+              { value: "15+", label: "Projetos Concluídos" },
+              { value: "3", label: "Empresas" },
+              { value: "12+", label: "Tecnologias" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

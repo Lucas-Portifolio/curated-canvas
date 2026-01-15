@@ -26,7 +26,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
           >
-            <span className="text-gradient">Seu Nome</span>
+            <span className="text-gradient">Lucas Barros</span>
           </motion.h1>
           
           <motion.h2
@@ -35,7 +35,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-2xl md:text-3xl text-muted-foreground mb-8"
           >
-            Desenvolvedor Full Stack
+            Desenvolvedor Back-End | Java | Microsserviços | Cloud (AWS, GCP)
           </motion.h2>
           
           <motion.p
@@ -44,8 +44,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12"
           >
-            Transformando ideias em experiências digitais excepcionais. 
-            Especializado em criar aplicações web modernas, escaláveis e com interfaces elegantes.
+            Desenvolvedor apaixonado por tecnologia e por resolver problemas com código limpo e escalável. 
+            Experiência em C#, .NET, Java, Kotlin e React, com foco em arquiteturas de microsserviços e aplicações em nuvem.
           </motion.p>
 
           {/* Social Links */}
@@ -56,7 +56,7 @@ const Hero = () => {
             className="flex items-center justify-center gap-4 mb-16"
           >
             <a
-              href="https://linkedin.com/in/seu-perfil"
+              href="https://linkedin.com/in/lucas-xae"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -65,7 +65,7 @@ const Hero = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/lucasxae"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -74,7 +74,7 @@ const Hero = () => {
               <Github size={20} />
             </a>
             <a
-              href="mailto:seuemail@email.com"
+              href="mailto:lucas_chaves14@outlook.com"
               className="social-link"
               aria-label="Email"
             >
