@@ -1,4 +1,5 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -10,25 +11,50 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-accent font-medium mb-4 animate-fade-up">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-accent font-medium mb-4"
+          >
             Olá, eu sou
-          </p>
+          </motion.p>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 animate-fade-up-delay-1">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
+          >
             <span className="text-gradient">Seu Nome</span>
-          </h1>
+          </motion.h1>
           
-          <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 animate-fade-up-delay-2">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-2xl md:text-3xl text-muted-foreground mb-8"
+          >
             Desenvolvedor Full Stack
-          </h2>
+          </motion.h2>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up-delay-3">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12"
+          >
             Transformando ideias em experiências digitais excepcionais. 
             Especializado em criar aplicações web modernas, escaláveis e com interfaces elegantes.
-          </p>
+          </motion.p>
 
           {/* Social Links */}
-          <div className="flex items-center justify-center gap-4 mb-16 animate-fade-up-delay-3">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex items-center justify-center gap-4 mb-16"
+          >
             <a
               href="https://linkedin.com/in/seu-perfil"
               target="_blank"
@@ -54,13 +80,19 @@ const Hero = () => {
             >
               <Mail size={20} />
             </a>
-          </div>
+          </motion.div>
 
           {/* Scroll Indicator */}
-          <a href="#projects" className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors animate-fade-up-delay-3">
+          <motion.a
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            href="#projects"
+            className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+          >
             <span className="text-sm">Ver Projetos</span>
             <ArrowDown size={20} className="animate-bounce" />
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>
